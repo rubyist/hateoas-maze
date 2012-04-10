@@ -1,0 +1,7 @@
+<maze version="1.0">
+  <cell href="<%= cell_url(@maze, :c => @maze.cells.count, :format => 'xml') %>" rel="exit">
+    <link rel="start" href="<%= cell_url(@maze, :c => '0:north', :format => 'xml') %>" />
+    <link href="<%= maze_url(@maze, :format => 'xml') %>" rel="maze" />
+    <link href="<%= mazes_url :format => 'xml' %>" rel="collection" />
+  </cell>
+</maze>

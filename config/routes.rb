@@ -1,4 +1,9 @@
 HateoasMaze::Application.routes.draw do
+  match 'mazes' => 'maze#index'
+  match 'maze/:id' => 'maze#show', :as => :maze
+  match 'maze/:id/finish' => 'maze#finish', :as => :finish
+  match 'maze/:id/:c' => 'maze#cell', :as => :cell
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

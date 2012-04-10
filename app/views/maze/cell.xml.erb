@@ -1,0 +1,26 @@
+<maze version="1.0">
+  <cell href="<%= cell_url(@maze, :c => '0:north', :format => 'xml') %>" rel="current">
+    <% if @cell[0] == 0 %>
+     <link href="<%= cell_url(@maze, :c => "#{@ix[0]}:north", :format => 'xml') %>" rel="north" />
+    <% end %>
+
+    <% if @cell[1] == 0 %>
+     <link href="<%= cell_url(@maze, :c => "#{@ix[1]}:west", :format => 'xml') %>" rel="west" />
+    <% end %>
+
+    <% if @cell[2] == 0 %>
+     <link href="<%= cell_url(@maze, :c => "#{@ix[2]}:south", :format => 'xml') %>" rel="south" />
+    <% end %>
+
+    <% if @cell[3] == 0 %>
+     <link href="<%= cell_url(@maze, :c => "#{@ix[3]}:east", :format => 'xml') %>" rel="east" />
+    <% end %>
+
+    <% if @ex == 1 %>
+      <link href="<%= finish_url(@maze, :format => 'xml') %>" rel="exit" />
+    <% end %>
+
+    <link href="<%= mazes_url :format => 'xml' %>" rel="collection" />
+    <link href="<%= maze_url(@maze, :format => 'xml') %>" rel="maze" />
+  </cell>
+</maze>

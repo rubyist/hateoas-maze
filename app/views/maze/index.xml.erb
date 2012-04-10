@@ -1,0 +1,7 @@
+<maze version="1.0">
+  <collection href="<%= mazes_url %>">
+    <% @mazes.each do |maze| %>
+      <link rel="maze" href="<%= maze_url(maze, :format => 'xml') %>" />
+    <% end %>
+  </collection>
+</maze>
