@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <!-- /* Designing Hypermedia APIs by Mike Amundsen (2011) */ -->
+  <head>
+    <title>Maze Game</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="/assets/maze-game.css">
+    <script type="text/javascript" src="/assets/ajax.js"></script>
+    <script type="text/javascript" src="/assets/mozxpath.js"></script>
+    <script type="text/javascript" src="/assets/maze-game.js"></script>
+  </head>
+  <body>
+    <h1>Maze Game</h1>
+    <div id="play-space">
+      <div id="history"></div>
+      <div id="display">
+        <span class="prompt">You have the following options:</span>
+        <span class="options"></span>
+      </div>
+      <form name="interface" action="#" method="post">
+        <fieldset>
+          <legend>What would you like to do?</legend>
+          <input type="text" name="move" value="">
+          <input type="submit" value="Go">
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
+
